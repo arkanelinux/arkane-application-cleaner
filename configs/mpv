@@ -1,0 +1,2 @@
+target='mpv.desktop'
+contain='NotShowIn=GNOME;'

@@ -1,0 +1,2 @@
+target='qvidcap.desktop'
+contain='NotShowIn=GNOME;'

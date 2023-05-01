@@ -1,0 +1,2 @@
+target='bssh.desktop'
+contain='NotShowIn=GNOME;'

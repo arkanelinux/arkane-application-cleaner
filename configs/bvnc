@@ -1,0 +1,2 @@
+target='bvnc.desktop'
+contain='NotShowIn=GNOME;'
