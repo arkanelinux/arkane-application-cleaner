@@ -1,0 +1,10 @@
+[Unit]
+Description=Hide unwanted .desktop files
+
+[Service]
+Type=oneshot
+RemainAfterExit=true
+ExecStart=/usr/bin/arkane-application-cleaner
+
+[Install]
+WantedBy=multi-user.target
