@@ -1,0 +1,2 @@
+target='cups.desktop'
+contain='NotShowIn=GNOME;'
