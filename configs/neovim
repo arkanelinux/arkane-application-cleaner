@@ -1,0 +1,2 @@
+target='nvim.desktop'
+contain='NotShowIn=GNOME;'
