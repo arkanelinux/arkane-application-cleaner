@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
+#
+# Licensed under the BSD-3-Clause license, 2023, Arkane Linux
 
 app_dir_path='/usr/share/applications'
 config_dir_path='/etc/arkane/application-cleaner'
@@ -21,20 +23,13 @@ for file in *; do
 		grep -qs "$contain" "$target"
 		declare grep_exit_code="$?"
 
-		if [[ $grep_exit_code -eq 0 ]]; then
-			printf "Skipping $target, file is already configured properly\n"
-		elif [[ $grep_exit_code -eq 1 ]]; then
+		if [[ $grep_exit_code -eq 1 ]]; then
 
 			printf "$contain" >> $target
 
 			if [[ ! $? -eq 0 ]]; then
 				printf "Failed to append $contain to $file, this might be a permission issue\n"
 			fi
-
-		elif [[ $grep_exit_code -eq 2 ]]; then
-			printf "Could not find $target, file does not exist\n"
-		else
-			printf "Encountered an unknown error with $file\n"
 		fi
 	fi
 done
