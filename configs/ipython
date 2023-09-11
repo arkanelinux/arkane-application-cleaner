@@ -1,0 +1,2 @@
+target='ipython.desktop'
+contain='NotShowIn=GNOME;'
