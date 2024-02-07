@@ -5,31 +5,35 @@
 app_dir_path='/usr/share/applications'
 config_dir_path='/etc/arkane/application-cleaner'
 
-cd "$config_dir_path"
+cd $config_dir_path
 
 for file in *; do
-	cd "$config_dir_path"
 
-	source "./$file"
-	declare source_exit_code="$?"
+	source $config_dir_path/$file
 
-	if [[ ! $source_exit_code -eq 0 ]]; then
-		printf "Failed to source $file in $config_dir_path\n"
-	elif [[ ! -v target || ! -v contain ]]; then
-		printf "Not all required variables are set in $file\n"
+	if [[ ! -v target || ! -v contain ]]; then
+		printf "Not all required variables are set in $file, skipping...\n"
 	else
-		cd "$app_dir_path"
+		cd $app_dir_path
 
-		grep -qs "$contain" "$target"
-		declare grep_exit_code="$?"
-
-		if [[ $grep_exit_code -eq 1 ]]; then
-
-			printf "$contain" >> $target
+		if ! grep -qs "$contain" "$target"; then
+			printf $contain >> $target
 
 			if [[ ! $? -eq 0 ]]; then
 				printf "Failed to append $contain to $file, this might be a permission issue\n"
 			fi
 		fi
+
+		if [[ ! -z $not_contain ]]; then
+			grep -sv "$not_contain" "$target" >> "$target.tmp"
+			mv "$target.tmp" "$target"
+		fi
+
+		unset contain
+		unset target
+		unset not_contain
+
 	fi
 done
+
+exit 0
