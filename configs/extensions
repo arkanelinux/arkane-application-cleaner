@@ -1,0 +1,2 @@
+target='org.gnome.Extensions.desktop'
+contain='NotShowIn=GNOME;'
