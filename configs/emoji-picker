@@ -1,2 +1,2 @@
 target='emoji-picker.desktop'
-contain='NotShowIn=GNOME;'
+contain='NotShowIn=GNOME;KDE;Pantheon;'

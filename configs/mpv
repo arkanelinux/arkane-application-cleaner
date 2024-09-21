@@ -1,2 +1,2 @@
 target='mpv.desktop'
-contain='NotShowIn=GNOME;'
+contain='NotShowIn=GNOME;kde;Pantheon;'

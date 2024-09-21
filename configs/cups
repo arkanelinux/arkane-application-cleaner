@@ -1,2 +1,2 @@
 target='cups.desktop'
-contain='NotShowIn=GNOME;'
+contain='NotShowIn=GNOME;KDE;Pantheon;'

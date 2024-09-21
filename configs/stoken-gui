@@ -1,2 +1,2 @@
 target='stoken-gui.desktop'
-contain='NotShowIn=GNOME;'
+contain='NotShowIn=GNOME;KDE;Pantheon;'

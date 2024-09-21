@@ -1,2 +1,2 @@
 target='qv4l2.desktop'
-contain='NotShowIn=GNOME;'
+contain='NotShowIn=GNOME;KDE;Pantheon;'
