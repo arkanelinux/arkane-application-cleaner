@@ -16,6 +16,10 @@ for file in *; do
 	else
 		cd $app_dir_path
 
+		if [[ ! -f "$target" ]]; then
+        		continue
+    		fi
+
 		if ! grep -qs "$contain" "$target"; then
 			printf $contain >> $target
 
