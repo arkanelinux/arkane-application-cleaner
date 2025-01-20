@@ -7,6 +7,10 @@ declare -r configs_list=($(ls /usr/share/applications))
 
 for f in "${configs_list[@]}"; do
 
+	if [[ ! -f "/usr/share/applications/$f" ]]; then
+		continue
+	fi
+
 	source "$config_dir/$f"
 
 	# If file does not contain required string, append it
