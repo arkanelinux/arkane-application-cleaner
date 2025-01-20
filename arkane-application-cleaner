@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+#
+# Licensed under the BSD-3-Clause license, 2023, Arkane Linux
+
+declare -r config_dir='/etc/arkane/application-cleaner'
+declare -r configs_list=($(ls /usr/share/applications))
+
+for f in "${configs_list[@]}"; do
+
+	source $config_dir/$f
+
+	# If file does not contain required string, append it
+	if ! grep -q "$contain" "/usr/share/applications/$f"; then
+		echo "Configuring $f"
+		echo "$contain" >> /usr/share/application/$f
+	else
+		echo "$f is already configured, skipping..."
+	fi
+
+done
+
+exit 0
