@@ -1,2 +1,1 @@
-target='helix.desktop'
 contain='NotShowIn=GNOME;KDE;Pantheon;'

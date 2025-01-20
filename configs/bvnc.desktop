@@ -1,2 +1,1 @@
-target='stoken-gui-small.desktop'
 contain='NotShowIn=GNOME;KDE;Pantheon;'

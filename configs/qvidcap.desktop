@@ -1,2 +1,1 @@
-target='qvidcap.desktop'
 contain='NotShowIn=GNOME;KDE;Pantheon'

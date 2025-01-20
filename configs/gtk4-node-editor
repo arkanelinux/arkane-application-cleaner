@@ -1,2 +1,0 @@
-target='org.gtk.gtk4.NodeEditor.desktop'
-contain='NotShowIn=GNOME;KDE;Pantheon;'

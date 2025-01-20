@@ -1,2 +1,1 @@
-target='avahi-discover.desktop'
 contain='NotShowIn=GNOME;KDE;Pantheon;'

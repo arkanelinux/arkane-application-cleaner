@@ -1,2 +1,1 @@
-target='vim.desktop'
 contain='NotShowIn=GNOME;KDE;Pantheon;'

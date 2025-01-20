@@ -1,3 +1,0 @@
-target='org.gnome.Extensions.desktop'
-contain='NotShowIn=GNOME;KDE;Pantheon;'
-not_contain='OnlyShowIn'

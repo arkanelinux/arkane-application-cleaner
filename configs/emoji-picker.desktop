@@ -1,2 +1,1 @@
-target='org.gnome.Sysprof.desktop'
 contain='NotShowIn=GNOME;KDE;Pantheon;'

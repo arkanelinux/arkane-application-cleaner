@@ -1,2 +1,1 @@
-target='org.gtk.Demo4.desktop'
 contain='NotShowIn=GNOME;KDE;Pantheon;'

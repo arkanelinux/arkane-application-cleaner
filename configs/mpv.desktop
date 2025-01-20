@@ -1,2 +1,1 @@
-target='mpv.desktop'
 contain='NotShowIn=GNOME;kde;Pantheon;'
