@@ -7,12 +7,12 @@ declare -r configs_list=($(ls /usr/share/applications))
 
 for f in "${configs_list[@]}"; do
 
-	source $config_dir/$f
+	source "$config_dir/$f"
 
 	# If file does not contain required string, append it
 	if ! grep -q "$contain" "/usr/share/applications/$f"; then
 		echo "Configuring $f"
-		echo "$contain" >> /usr/share/applications/$f
+		echo "$contain" >> "/usr/share/applications/$f"
 	else
 		echo "$f is already configured, skipping..."
 	fi
